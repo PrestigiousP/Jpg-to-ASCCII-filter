@@ -1,5 +1,8 @@
 # python-filter
-A program used to filter images in python, primarly used for dice art.
+A program used to filter images in python, primarily used for dice art.
+
+## Important note:
+Each time the program is used, the file is going to be overridden. If you want to keep your file, make a copy before running the program again.
 
 ## How to use it
 
