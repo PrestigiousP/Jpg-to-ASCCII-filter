@@ -6,6 +6,7 @@ import cv2
 from matplotlib import pyplot as plt
 
 CONST_DICE_VALS = [1, 2, 3, 4, 5, 6]
+CONST_ASCII_TEST = ['.', ':', '|', 'U', '$', '@']
 
 
 def define_steps(val):
@@ -19,7 +20,6 @@ def calc_range(pix_val, step):
         count += 1
         incr += step
         if incr > 255:
-            print("index out of range? " + str(incr))
             count = 5
             break
     return count
@@ -30,17 +30,11 @@ def write_result(res, step):
     for row in res:
         for col in row:
             val = calc_range(col, step)
-            dice_val = CONST_DICE_VALS[val]
+            # dice_val = CONST_DICE_VALS[val]
+            dice_val = CONST_ASCII_TEST[val]
             f.write(str(dice_val) + ' ')
         f.write("\n")
     f.close()
-
-
-def convert_to_matrix(image):
-    pixels = list(image.getdata())
-    width, height = image.size
-    print('width: ' + str(width), 'height: ' + str(height))
-    return np.array(pixels).reshape(width, height)
 
 
 def convert_to_grayscale(img_path):
