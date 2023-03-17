@@ -1,0 +1,15 @@
+code {
+    display: flex;
+    justify-content: center;
+    margin-top: -1em;
+    font-size: 1em;
+    letter-spacing: 0.0002em;
+    line-height: 0.7em;
+    font-weight: bold;
+    color: white;
+}
+
+body {
+    background-color: #3d3d3d;
+}
+
